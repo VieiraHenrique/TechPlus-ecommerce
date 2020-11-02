@@ -1,0 +1,55 @@
+$black: #232323;
+$primary: #d80505;
+
+@import 'reset';
+
+body {
+    background: #F5F5F5;
+    font-size: 1.4rem;
+}
+
+.btn {
+    margin-top: 2rem;
+    width: fit-content;
+    display: inline-block;
+    color: $black;
+    padding: 1rem 2rem;
+    border: 2px solid $black;
+
+    &:hover {
+        background: $black;
+        color: #fff;
+
+    }
+}
+
+@import 'nav';
+@import 'hero';
+@import 'brands';
+@import 'products';
+@import 'newsletter';
+@import 'testimonial';
+@import 'footer';
+
+
+.arrow {
+    position: fixed;
+    bottom: 5rem;
+    right: 5rem;
+
+    font-size: 5rem;
+    z-index: 100000;
+    cursor: pointer;
+
+    i {
+        color: $primary;
+    }
+
+    display: none;
+
+    @media (min-width: 768px) {
+        display: block;
+    }
+}
+
+/***********************/

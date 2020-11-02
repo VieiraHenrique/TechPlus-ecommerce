@@ -1,0 +1,115 @@
+.nav__upper {
+    background: #fff;
+    border-top: .5rem solid $primary;
+    /* border-bottom: .5rem solid $primary; */
+
+    #toggle {
+        display: none;
+    }
+
+    label {
+        position: relative;
+        z-index: 1000;
+        font-size: 3rem;
+
+        @media (min-width:70rem) {
+            display: none;
+        }
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &--logo {
+        text-transform: uppercase;
+        font-weight: 800;
+
+        span {
+            color: $primary;
+        }
+    }
+
+    &--menu ul {
+        position: fixed;
+        top: 0;
+        right: -60vw;
+        width: 60vw;
+        height: 100vh;
+        background: rgba($color: #000000, $alpha: .9);
+        display: flex;
+        gap: 4rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: right .4s ease;
+
+        a {
+            color: #fff;
+
+            &:hover {
+                border-bottom: 2px solid $primary;
+            }
+        }
+
+        i {
+            cursor: pointer;
+            color: #fff;
+        }
+
+        @media (min-width:70rem) {
+            all: unset;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
+            a {
+                font-size: 1.4rem;
+                color: $black;
+            }
+
+            i {
+                color: $black;
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+#toggle:checked~ul {
+    right: 0vw;
+}
+
+#toggle:checked~label {
+    color: #fff;
+}
+
+.nav__sub {
+    background: #474747;
+
+    .container {
+        padding: 1.5rem;
+    }
+
+    ul {
+        display: flex;
+        color: #fff;
+        justify-content: space-around;
+
+        a {
+            color: #fff;
+
+            &:hover {
+                border-bottom: 2px solid $primary;
+            }
+        }
+
+        @media (min-width:70rem) {
+            justify-content: flex-start;
+            gap: 3rem;
+        }
+    }
+}

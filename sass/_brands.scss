@@ -1,0 +1,23 @@
+.brands {
+
+    display: none;
+
+    @media (min-width: 768px) {
+        display: block;
+    }
+
+    .container {
+        height: 11rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    background: #eeeeee;
+
+
+    img {
+        width: 5rem;
+    }
+}
